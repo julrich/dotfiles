@@ -17,7 +17,7 @@ fi
 
 ### Install git and some other tools we'd like to use ###
 $aptget update
-$aptget install -y zsh tmux vim git
+$aptget install -y zsh tmux vim git mr
 
 ### Install homeshick ###
 git clone git://github.com/andsens/homeshick.git $HOME/.homesick/repos/homeshick
