@@ -3,7 +3,7 @@
 # this is based on: https://gist.github.com/andsens/2913223
 
 # Paste this into ssh
-# curl -sL https://gist.github.com/andsens/2913223/raw/bootstrap_homeshick.sh | tar -xzO | /bin/bash -ex
+# curl -sL https://raw.githubusercontent.com/julrich/dotfiles/master/util/bootstrap.sh | tar -xzO | /bin/bash -ex
 # When forking, you can get the URL from the raw (<>) button.
 
 ### Set some command variables depending on whether we are root or not ###
@@ -30,11 +30,11 @@ eval `ssh-agent -s`
 homeshick --batch clone git@github.com:julrich/dotfiles
 
 ### Clone public repos ###
-homeshick clone --batch robbyrussell/oh-my-zsh
+mr checkout
 
 ### Link it all to $HOME ###
 homeshick link --force
 
 ### Set default shell to your favorite shell ###
-$chsh --shell /bin/zsh `whoami`
+$chsh --shell /bin/bash `whoami`
 echo "Log in again to start your proper shell"
