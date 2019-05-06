@@ -1,3 +1,4 @@
+include = cat ${HOME}/mrconfig
 
 [.homesick/repos/dotfiles-bash]
 checkout = homeshick clone 'git@github.com:julrich/dotfiles-bash.git' 'dotfiles-bash'
