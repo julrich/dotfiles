@@ -1,6 +1,6 @@
 .homesick/repos/.tmux 8809af7c9f6f8f325eb88dfc0b31a2f89e57ff53
 .homesick/repos/dotfiles-bash 912a606fce21d2468166e801be5a9b6929f14666
-.homesick/repos/dotfiles-git 1b25ef0032b2e079437e8e01398cf3bb6f6404c2
+.homesick/repos/dotfiles-git 73c8c99d123ba381bb90d3fa06eb904a127a0bdb
 .homesick/repos/dotfiles-ssh ac6d2dd4e20fed64f1467a8415f371bd84cc9799
 .homesick/repos/dotfiles-tmux 81df015429f7403bb099e980c2255a89e8e370b3
 .homesick/repos/dotfiles-vim ec7cfe0502b23409cf6afc4bb3714f770f6e3930
@@ -9,7 +9,7 @@
 .homesick/repos/incsearch-easymotion.vim fcdd3aee6f4c0eef1a515727199ece8d6c6041b5
 .homesick/repos/incsearch-fuzzy.vim b08fa8fbfd633e2f756fde42bfb5251d655f5403
 .homesick/repos/incsearch.vim 25e2547fb0566460f5999024f7a0de7b3775201f
-.homesick/repos/oh-my-zsh 81ed25610dd6a7de858c38fa5bfb1545ebfc46e0
+.homesick/repos/oh-my-zsh 10c1b7d2ca78066e92fd2ff8ff793d8d0a2a9121
 .homesick/repos/spaceship-prompt d9f25e14e7bec4bef223fd8a9151d40b8aa868fa
 .homesick/repos/tmux-continuum 100498d0c262a64a372bf3f1c5012841957516ee
 .homesick/repos/tmux-online-status 82f4fbcaee7ece775f37cf7ed201f9d4beab76b8
