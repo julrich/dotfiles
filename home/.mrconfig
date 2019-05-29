@@ -1,7 +1,7 @@
 include = cat ${HOME}/mrconfig
 
 [.homesick/repos/.tmux]
-checkout = source "$HOME/.homesick/repos/homeshick/homeshick.sh" && homeshick clone 'https://github.com/gpakosz/.tmux' '.tmux'
+checkout = /bin/bash -c "homeshick clone 'https://github.com/gpakosz/.tmux' '.tmux'"
 
 [.homesick/repos/tpm]
 checkout = homeshick clone 'https://github.com/tmux-plugins/tpm.git' 'tpm'

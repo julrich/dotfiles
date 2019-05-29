@@ -3,7 +3,7 @@
 # this is based on: https://gist.github.com/andsens/2913223
 
 # Paste this into ssh
-# curl -sL https://raw.githubusercontent.com/julrich/dotfiles/master/util/bootstrap.sh | tar -xzO | /bin/bash -ex
+# curl -sL https://raw.githubusercontent.com/julrich/dotfiles/master/util/bootstrap.sh | /bin/bash -ex
 # When forking, you can get the URL from the raw (<>) button.
 
 ### Set some command variables depending on whether we are root or not ###
