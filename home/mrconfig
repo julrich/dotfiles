@@ -23,7 +23,6 @@
 
 [DEFAULT]
 lib =
-    set -ue -o pipefail
     TOP_DIR=$(dirname "$MR_CONFIG")
     MR_FREEZE=${MR_FREEZE-"${TOP_DIR}/mrfreeze"}   # Freeze file
     _err() { echo "$@" 1>&2; exit -1; }

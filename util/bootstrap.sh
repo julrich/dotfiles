@@ -17,7 +17,10 @@ fi
 
 ### Install git and some other tools we'd like to use ###
 $aptget update
-$aptget install -y zsh tmux vim git mr
+$aptget install -y zsh tmux vim git mr tig
+
+### Set default shell to your favorite shell ###
+$chsh --shell /bin/bash `whoami`
 
 ### Install homeshick ###
 git clone git://github.com/andsens/homeshick.git $HOME/.homesick/repos/homeshick
@@ -25,6 +28,7 @@ source $HOME/.homesick/repos/homeshick/homeshick.sh
 
 ### Set SSH_AUTH_SOCK etc. ###
 eval `ssh-agent -s`
+ssh-add /home/julrich/.ssh/id_rsa_second
 
 ### Deploy dotfiles ###
 homeshick --batch clone git@github.com:julrich/dotfiles
@@ -35,6 +39,4 @@ mr checkout
 ### Link it all to $HOME ###
 homeshick link --force
 
-### Set default shell to your favorite shell ###
-$chsh --shell /bin/bash `whoami`
 echo "Log in again to start your proper shell"
