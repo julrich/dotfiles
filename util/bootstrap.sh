@@ -9,15 +9,51 @@
 ### Set some command variables depending on whether we are root or not ###
 # This assumes you use a debian derivate, replace with yum, pacman etc.
 aptget='sudo apt-get'
+aptkey='sudo apt-key'
+addaptrepository='sudo add-apt-repository' 
+docker='sudo docker'
+usermod='sudo usermod'
 chsh='sudo chsh'
 if [ `whoami` = 'root' ]; then
 	aptget='apt-get'
+	aptkey='apt-key'
+	addaptrepository='add-apt-repository' 
+	docker='docker'
 	chsh='chsh'
 fi
 
-### Install git and some other tools we'd like to use ###
+### Update repositories ###
 $aptget update
-$aptget install -y git mr docker.io
+
+### Install Docker CE (see: https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-using-the-repository) ###
+#### Uninstall old versions ####
+$aptget remove docker docker-engine docker.io containerd runc
+#### Install packages to allow apt to use a repository over HTTPS ####
+$aptget install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
+#### Add Docker’s official GPG key ####
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | $aptkey add -
+#### Verify that you now have the key with the fingerprint ####
+$aptkey fingerprint 0EBFCD88
+
+$addaptrepository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+#### Install Docker CE #####
+$aptget update
+$aptget install docker-ce docker-ce-cli containerd.io
+#### Test correct docker installation ####
+$docker run hello-world
+#### Add user to docker group ####
+$usermod -aG docker `whoami`
+
+### Install git and some other tools we'd like to use ###
+$aptget install -y git mr
 
 ### Set default shell to your favorite shell ###
 $chsh --shell /bin/bash `whoami`
