@@ -1,70 +1,70 @@
 include = cat ${HOME}/mrconfig
 
 [.homesick/repos/.tmux]
-checkout = /bin/bash -c "source $HOME/.homesick/repos/homeshick/homeshick.sh && homeshick clone 'https://github.com/gpakosz/.tmux'"
+checkout = git clone 'https://github.com/gpakosz/.tmux'"
 
 [.homesick/repos/tpm]
-checkout = homeshick clone 'https://github.com/tmux-plugins/tpm.git' 'tpm'
+checkout = git clone 'https://github.com/tmux-plugins/tpm.git' 'tpm'
 
 [.homesick/repos/tmux-resurrect]
-checkout = homeshick clone 'https://github.com/tmux-plugins/tmux-resurrect.git' 'tmux-resurrect'
+checkout = git clone 'https://github.com/tmux-plugins/tmux-resurrect.git' 'tmux-resurrect'
 
 [.homesick/repos/tmux-continuum]
-checkout = homeshick clone 'https://github.com/tmux-plugins/tmux-continuum.git' 'tmux-continuum'
+checkout = git clone 'https://github.com/tmux-plugins/tmux-continuum.git' 'tmux-continuum'
 
 [.homesick/repos/tmux-online-status]
-checkout = homeshick clone 'https://github.com/tmux-plugins/tmux-online-status.git' 'tmux-online-status'
+checkout = git clone 'https://github.com/tmux-plugins/tmux-online-status.git' 'tmux-online-status'
 
 [.homesick/repos/oh-my-zsh]
-checkout = homeshick clone 'https://github.com/robbyrussell/oh-my-zsh' 'oh-my-zsh'
+checkout = git clone 'https://github.com/robbyrussell/oh-my-zsh' 'oh-my-zsh'
 
 [.homesick/repos/spaceship-prompt]
-checkout = homeshick clone 'https://github.com/denysdovhan/spaceship-prompt' 'spaceship-prompt'
+checkout = git clone 'https://github.com/denysdovhan/spaceship-prompt' 'spaceship-prompt'
 
 [.homesick/repos/zsh-autosuggestions]
-checkout = homeshick clone 'https://github.com/zsh-users/zsh-autosuggestions' 'zsh-autosuggestions'
+checkout = git clone 'https://github.com/zsh-users/zsh-autosuggestions' 'zsh-autosuggestions'
 
 [.homesick/repos/zsh-syntax-highlighting]
-checkout = homeshick clone 'https://github.com/zsh-users/zsh-syntax-highlighting' 'zsh-syntax-highlighting'
+checkout = git clone 'https://github.com/zsh-users/zsh-syntax-highlighting' 'zsh-syntax-highlighting'
 
 [.homesick/repos/vimrc]
-checkout = homeshick clone 'https://github.com/amix/vimrc.git' 'vimrc'
+checkout = git clone 'https://github.com/amix/vimrc.git' 'vimrc'
 
 [.homesick/repos/incsearch-easymotion.vim]
-checkout = homeshick clone 'https://github.com/haya14busa/incsearch-easymotion.vim.git' 'incsearch-easymotion.vim'
+checkout = git clone 'https://github.com/haya14busa/incsearch-easymotion.vim.git' 'incsearch-easymotion.vim'
 
 [.homesick/repos/incsearch-fuzzy.vim]
-checkout = homeshick clone 'https://github.com/haya14busa/incsearch-fuzzy.vim.git' 'incsearch-fuzzy.vim'
+checkout = git clone 'https://github.com/haya14busa/incsearch-fuzzy.vim.git' 'incsearch-fuzzy.vim'
 
 [.homesick/repos/incsearch.vim]
-checkout = homeshick clone 'https://github.com/haya14busa/incsearch.vim.git' 'incsearch.vim'
+checkout = git clone 'https://github.com/haya14busa/incsearch.vim.git' 'incsearch.vim'
 
 [.homesick/repos/vim-easymotion]
-checkout = homeshick clone 'https://github.com/easymotion/vim-easymotion.git' 'vim-easymotion'
+checkout = git clone 'https://github.com/easymotion/vim-easymotion.git' 'vim-easymotion'
 
 [.homesick/repos/vim-obsession]
-checkout = homeshick clone 'https://github.com/tpope/vim-obsession.git' 'vim-obsession'
+checkout = git clone 'https://github.com/tpope/vim-obsession.git' 'vim-obsession'
 
 [.homesick/repos/vim-repeat]
-checkout = homeshick clone 'https://github.com/tpope/vim-repeat.git' 'vim-repeat'
+checkout = git clone 'https://github.com/tpope/vim-repeat.git' 'vim-repeat'
 
 [.homesick/repos/vim-surround]
-checkout = homeshick clone 'https://github.com/tpope/vim-surround.git' 'vim-surround'
+checkout = git clone 'https://github.com/tpope/vim-surround.git' 'vim-surround'
 
 [.homesick/repos/dotfiles-bash]
-checkout = homeshick clone 'git@github.com:julrich/dotfiles-bash.git' 'dotfiles-bash'
+checkout = git clone 'git@github.com:julrich/dotfiles-bash.git' 'dotfiles-bash'
 
 [.homesick/repos/dotfiles-git]
-checkout = homeshick clone 'git@github.com:julrich/dotfiles-git.git' 'dotfiles-git'
+checkout = git clone 'git@github.com:julrich/dotfiles-git.git' 'dotfiles-git'
 
 [.homesick/repos/dotfiles-ssh]
-checkout = homeshick clone 'git@github.com:julrich/dotfiles-ssh.git' 'dotfiles-ssh'
+checkout = git clone 'git@github.com:julrich/dotfiles-ssh.git' 'dotfiles-ssh'
 
 [.homesick/repos/dotfiles-tmux]
-checkout = homeshick clone 'git@github.com:julrich/dotfiles-tmux.git' 'dotfiles-tmux'
+checkout = git clone 'git@github.com:julrich/dotfiles-tmux.git' 'dotfiles-tmux'
 
 [.homesick/repos/dotfiles-vim]
-checkout = homeshick clone 'git@github.com:julrich/dotfiles-vim.git' 'dotfiles-vim'
+checkout = git clone 'git@github.com:julrich/dotfiles-vim.git' 'dotfiles-vim'
 
 [.homesick/repos/dotfiles-zsh]
-checkout = homeshick clone 'git@github.com:julrich/dotfiles-zsh.git' 'dotfiles-zsh'
+checkout = git clone 'git@github.com:julrich/dotfiles-zsh.git' 'dotfiles-zsh'
