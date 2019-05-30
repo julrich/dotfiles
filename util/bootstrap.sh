@@ -17,7 +17,7 @@ fi
 
 ### Install git and some other tools we'd like to use ###
 $aptget update
-$aptget install -y git mr
+$aptget install -y git mr docker.io
 
 ### Set default shell to your favorite shell ###
 $chsh --shell /bin/bash `whoami`
