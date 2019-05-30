@@ -10,14 +10,14 @@
 # This assumes you use a debian derivate, replace with yum, pacman etc.
 aptget='sudo apt-get'
 aptkey='sudo apt-key'
-addaptrepository='sudo add-apt-repository' 
+addaptrepository='sudo add-apt-repository'
 docker='sudo docker'
 usermod='sudo usermod'
 chsh='sudo chsh'
 if [ `whoami` = 'root' ]; then
 	aptget='apt-get'
 	aptkey='apt-key'
-	addaptrepository='add-apt-repository' 
+	addaptrepository='add-apt-repository'
 	docker='docker'
 	chsh='chsh'
 fi
@@ -69,10 +69,13 @@ ssh-add ~/.ssh/id_rsa_second
 ### Deploy dotfiles ###
 homeshick --batch clone git@github.com:julrich/dotfiles
 
-### Link it all to $HOME ###
+### Link mr config to $HOME ###
 homeshick link --force
 
 ### Clone public repos ###
 mr checkout
+
+### Link everything to $HOME ###
+homeshick link --force
 
 echo "Log in again to start your proper shell"
