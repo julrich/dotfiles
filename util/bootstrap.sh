@@ -67,12 +67,12 @@ eval `ssh-agent -s`
 ssh-add ~/.ssh/id_rsa_second
 
 ### Deploy dotfiles ###
-homeshick clone git@github.com:julrich/dotfiles
+homeshick --batch clone git@github.com:julrich/dotfiles
+
+### Link it all to $HOME ###
+homeshick link --force
 
 ### Clone public repos ###
 mr checkout
-
-### Link it all to $HOME ###
-#homeshick link --force
 
 echo "Log in again to start your proper shell"
