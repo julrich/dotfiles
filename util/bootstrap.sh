@@ -27,9 +27,9 @@ $aptget update
 
 ### Install Docker CE (see: https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-using-the-repository) ###
 #### Uninstall old versions ####
-$aptget remove docker docker-engine docker.io containerd runc
+$aptget remove -y docker docker-engine docker.io containerd runc
 #### Install packages to allow apt to use a repository over HTTPS ####
-$aptget install \
+$aptget install -y \
     apt-transport-https \
     ca-certificates \
     curl \
@@ -46,7 +46,7 @@ $addaptrepository \
    stable"
 #### Install Docker CE #####
 $aptget update
-$aptget install docker-ce docker-ce-cli containerd.io
+$aptget install -y docker-ce docker-ce-cli containerd.io
 #### Test correct docker installation ####
 $docker run hello-world
 #### Add user to docker group ####
