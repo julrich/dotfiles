@@ -17,7 +17,7 @@ fi
 
 ### Install git and some other tools we'd like to use ###
 $aptget update
-$aptget install -y zsh tmux vim git mr tig
+$aptget install -y git mr
 
 ### Set default shell to your favorite shell ###
 $chsh --shell /bin/bash `whoami`
@@ -28,7 +28,7 @@ source $HOME/.homesick/repos/homeshick/homeshick.sh
 
 ### Set SSH_AUTH_SOCK etc. ###
 eval `ssh-agent -s`
-ssh-add /home/julrich/.ssh/id_rsa_second
+ssh-add ~/.ssh/id_rsa_second
 
 ### Deploy dotfiles ###
 homeshick --batch clone git@github.com:julrich/dotfiles

@@ -1,70 +1,98 @@
 include = cat ${HOME}/mrconfig
 
 [.homesick/repos/.tmux]
+order = 3
+pre_checkout = sudo apt install -y tmux
 checkout = git clone 'https://github.com/gpakosz/.tmux' '.tmux'
+post_checkout = cd; ln -s -f $MR_REPO/.tmux.conf
 
 [.homesick/repos/tpm]
+order = 30
 checkout = git clone 'https://github.com/tmux-plugins/tpm.git' 'tpm'
 
 [.homesick/repos/tmux-resurrect]
+order = 31
 checkout = git clone 'https://github.com/tmux-plugins/tmux-resurrect.git' 'tmux-resurrect'
 
 [.homesick/repos/tmux-continuum]
+order = 32
 checkout = git clone 'https://github.com/tmux-plugins/tmux-continuum.git' 'tmux-continuum'
 
 [.homesick/repos/tmux-online-status]
+order = 33
 checkout = git clone 'https://github.com/tmux-plugins/tmux-online-status.git' 'tmux-online-status'
 
 [.homesick/repos/oh-my-zsh]
+pre_checkout = sudo apt install -y zsh
+order = 5
 checkout = git clone 'https://github.com/robbyrussell/oh-my-zsh' 'oh-my-zsh'
 
 [.homesick/repos/spaceship-prompt]
+order = 50
 checkout = git clone 'https://github.com/denysdovhan/spaceship-prompt' 'spaceship-prompt'
 
 [.homesick/repos/zsh-autosuggestions]
+order = 51
 checkout = git clone 'https://github.com/zsh-users/zsh-autosuggestions' 'zsh-autosuggestions'
 
 [.homesick/repos/zsh-syntax-highlighting]
+order = 52
 checkout = git clone 'https://github.com/zsh-users/zsh-syntax-highlighting' 'zsh-syntax-highlighting'
 
 [.homesick/repos/vimrc]
+pre_checkout = sudo apt install -y vim
+order = 7
 checkout = git clone 'https://github.com/amix/vimrc.git' 'vimrc'
 
 [.homesick/repos/incsearch-easymotion.vim]
+order = 70
 checkout = git clone 'https://github.com/haya14busa/incsearch-easymotion.vim.git' 'incsearch-easymotion.vim'
 
 [.homesick/repos/incsearch-fuzzy.vim]
+order = 71
 checkout = git clone 'https://github.com/haya14busa/incsearch-fuzzy.vim.git' 'incsearch-fuzzy.vim'
 
 [.homesick/repos/incsearch.vim]
+order = 72
 checkout = git clone 'https://github.com/haya14busa/incsearch.vim.git' 'incsearch.vim'
 
 [.homesick/repos/vim-easymotion]
+order = 73
 checkout = git clone 'https://github.com/easymotion/vim-easymotion.git' 'vim-easymotion'
 
 [.homesick/repos/vim-obsession]
+order = 74
 checkout = git clone 'https://github.com/tpope/vim-obsession.git' 'vim-obsession'
 
 [.homesick/repos/vim-repeat]
+order = 75
 checkout = git clone 'https://github.com/tpope/vim-repeat.git' 'vim-repeat'
 
 [.homesick/repos/vim-surround]
+order = 76
 checkout = git clone 'https://github.com/tpope/vim-surround.git' 'vim-surround'
 
 [.homesick/repos/dotfiles-bash]
+order = 110
 checkout = git clone 'git@github.com:julrich/dotfiles-bash.git' 'dotfiles-bash'
 
 [.homesick/repos/dotfiles-git]
+order = 120
+pre_checkout = sudo apt install -y tig
 checkout = git clone 'git@github.com:julrich/dotfiles-git.git' 'dotfiles-git'
 
 [.homesick/repos/dotfiles-ssh]
+order = 130
 checkout = git clone 'git@github.com:julrich/dotfiles-ssh.git' 'dotfiles-ssh'
 
 [.homesick/repos/dotfiles-tmux]
+order = 140
 checkout = git clone 'git@github.com:julrich/dotfiles-tmux.git' 'dotfiles-tmux'
 
 [.homesick/repos/dotfiles-vim]
+order = 150
 checkout = git clone 'git@github.com:julrich/dotfiles-vim.git' 'dotfiles-vim'
 
 [.homesick/repos/dotfiles-zsh]
+order = 160
 checkout = git clone 'git@github.com:julrich/dotfiles-zsh.git' 'dotfiles-zsh'
