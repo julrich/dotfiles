@@ -67,7 +67,7 @@ eval `ssh-agent -s`
 ssh-add ~/.ssh/id_rsa_second
 
 ### Deploy dotfiles ###
-homeshick --batch clone git@github.com:julrich/dotfiles
+homeshick clone git@github.com:julrich/dotfiles
 
 ### Clone public repos ###
 mr checkout
