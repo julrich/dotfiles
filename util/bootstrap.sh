@@ -50,7 +50,7 @@ $aptget install -y docker-ce docker-ce-cli containerd.io
 #### Test correct docker installation ####
 $docker run hello-world
 #### Add user to docker group ####
-$usermod -aG docker `whoami`
+$usermod -a -G docker `whoami`
 
 ### Install git and some other tools we'd like to use ###
 $aptget install -y git mr
@@ -73,6 +73,6 @@ homeshick --batch clone git@github.com:julrich/dotfiles
 mr checkout
 
 ### Link it all to $HOME ###
-homeshick link --force
+#homeshick link --force
 
 echo "Log in again to start your proper shell"
