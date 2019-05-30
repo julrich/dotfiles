@@ -76,6 +76,7 @@ checkout = git clone 'https://github.com/tpope/vim-surround.git' 'vim-surround'
 
 [.homesick/repos/dotfiles-bash]
 order = 110
+pre_checkout = sudo apt install -y rbenv
 checkout = git clone 'git@github.com:julrich/dotfiles-bash.git' 'dotfiles-bash'
 
 [.homesick/repos/dotfiles-git]
