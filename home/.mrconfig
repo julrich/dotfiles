@@ -4,7 +4,7 @@ include = cat ${HOME}/mrconfig
 order = 3
 pre_checkout = sudo apt install -y tmux
 checkout = git clone 'https://github.com/gpakosz/.tmux' '.tmux'
-post_checkout = cd; ln -s -f $MR_REPO/.tmux.conf
+post_checkout = cd; ln -s -f $MR_REPO .tmux
 
 [.homesick/repos/tpm]
 order = 30
@@ -26,6 +26,7 @@ checkout = git clone 'https://github.com/tmux-plugins/tmux-online-status.git' 't
 pre_checkout = sudo apt install -y zsh
 order = 5
 checkout = git clone 'https://github.com/robbyrussell/oh-my-zsh' 'oh-my-zsh'
+post_checkout = cd; ln -s -f $MR_REPO .oh-my-zsh
 
 [.homesick/repos/spaceship-prompt]
 order = 50
@@ -40,9 +41,10 @@ order = 52
 checkout = git clone 'https://github.com/zsh-users/zsh-syntax-highlighting' 'zsh-syntax-highlighting'
 
 [.homesick/repos/vimrc]
-pre_checkout = sudo apt install -y vim
+pre_checkout = sudo apt install -y vim fonts-hack-ttf
 order = 7
 checkout = git clone 'https://github.com/amix/vimrc.git' 'vimrc'
+post_checkout = cd; ln -s -f $MR_REPO .vim_runtime; sh ~/.vim_runtime/install_awesome_vimrc.sh
 
 [.homesick/repos/incsearch-easymotion.vim]
 order = 70
