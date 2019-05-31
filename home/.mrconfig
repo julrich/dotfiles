@@ -93,7 +93,7 @@ post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link dotfiles-ssh
 
 [.homesick/repos/dotfiles-tmux]
 order = 140
-pre_checkout = rm $HOME/.tmux/.tmux.conf $HOME/.config/systemd/user/tmux.service
+pre_checkout = rm -f $HOME/.tmux/.tmux.conf $HOME/.config/systemd/user/tmux.service
 checkout = git clone 'git@github.com:julrich/dotfiles-tmux.git' 'dotfiles-tmux'
 post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link dotfiles-tmux
 
