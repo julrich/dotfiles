@@ -31,7 +31,7 @@ $aptget update
 
 ### Install Docker CE (see: https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-using-the-repository) ###
 #### Uninstall old versions ####
-$aptget remove -y docker docker-engine docker.io containerd runc
+$aptget remove -y docker docker-engine docker.io containerd runc || true
 #### Install packages to allow apt to use a repository over HTTPS ####
 $aptget install -y \
     apt-transport-https \
