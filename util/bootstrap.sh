@@ -83,6 +83,8 @@ homeshick --batch clone git@github.com:julrich/dotfiles
 homeshick link --force
 
 ### Clone public repos ###
-cd && mr checkout
+cd
+mr checkout
+mr unfreeze
 
 echo "Log in again to start your proper shell"
