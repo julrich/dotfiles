@@ -14,12 +14,16 @@ addaptrepository='sudo add-apt-repository'
 docker='sudo docker'
 usermod='sudo usermod'
 chsh='sudo chsh'
+curl='sudo curl'
+chmod='sudo chmod'
 if [ `whoami` = 'root' ]; then
 	aptget='apt-get'
 	aptkey='apt-key'
 	addaptrepository='add-apt-repository'
 	docker='docker'
 	chsh='chsh'
+    curl='curl'
+    chmod='chmod'
 fi
 
 ### Update repositories ###
@@ -51,9 +55,12 @@ $aptget install -y docker-ce docker-ce-cli containerd.io
 $docker run hello-world
 #### Add user to docker group ####
 $usermod -a -G docker `whoami`
+#### Install docker-compose (see: https://docs.docker.com/compose/install/) ####
+$curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+$chmod +x /usr/local/bin/docker-compose
 
 ### Install git and some other tools we'd like to use ###
-$aptget install -y git mr
+$aptget install -y git mr jq
 
 ### Set default shell to your favorite shell ###
 $chsh --shell /bin/bash `whoami`
