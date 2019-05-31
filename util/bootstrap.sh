@@ -52,7 +52,7 @@ $addaptrepository \
 $aptget update
 $aptget install -y docker-ce docker-ce-cli containerd.io
 #### Test correct docker installation ####
-$docker run hello-world
+$docker run --rm hello-world
 #### Add user to docker group ####
 $usermod -a -G docker `whoami`
 #### Install docker-compose (see: https://docs.docker.com/compose/install/) ####
