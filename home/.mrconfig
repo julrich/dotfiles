@@ -76,33 +76,33 @@ checkout = git clone 'https://github.com/tpope/vim-surround.git' 'vim-surround'
 
 [.homesick/repos/dotfiles-bash]
 order = 110
-pre_checkout = sudo apt install -y rbenv; rm -f $HOME/.bashrc $HOME/.profile
+pre_checkout = sudo apt install -y rbenv
 checkout = git clone 'git@github.com:julrich/dotfiles-bash.git' 'dotfiles-bash'
-post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link dotfiles-bash
+post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link --force dotfiles-bash
 
 [.homesick/repos/dotfiles-git]
 order = 120
 pre_checkout = sudo apt install -y tig
 checkout = git clone 'git@github.com:julrich/dotfiles-git.git' 'dotfiles-git'
-post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link dotfiles-git
+post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link --force dotfiles-git
 
 [.homesick/repos/dotfiles-ssh]
 order = 130
 checkout = git clone 'git@github.com:julrich/dotfiles-ssh.git' 'dotfiles-ssh'
-post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link dotfiles-ssh
+post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link --force dotfiles-ssh
 
 [.homesick/repos/dotfiles-tmux]
 order = 140
 pre_checkout = rm -f $HOME/.tmux/.tmux.conf $HOME/.config/systemd/user/tmux.service
 checkout = git clone 'git@github.com:julrich/dotfiles-tmux.git' 'dotfiles-tmux'
-post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link dotfiles-tmux
+post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link --force dotfiles-tmux
 
 [.homesick/repos/dotfiles-vim]
 order = 150
 checkout = git clone 'git@github.com:julrich/dotfiles-vim.git' 'dotfiles-vim'
-post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link dotfiles-vim
+post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link --force dotfiles-vim
 
 [.homesick/repos/dotfiles-zsh]
 order = 160
 checkout = git clone 'git@github.com:julrich/dotfiles-zsh.git' 'dotfiles-zsh'
-post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link dotfiles-zsh
+post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link --force dotfiles-zsh
