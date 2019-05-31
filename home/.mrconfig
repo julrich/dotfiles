@@ -44,7 +44,7 @@ checkout = git clone 'https://github.com/zsh-users/zsh-syntax-highlighting' 'zsh
 pre_checkout = sudo apt install -y vim fonts-hack-ttf
 order = 7
 checkout = git clone 'https://github.com/amix/vimrc.git' 'vimrc'
-post_checkout = cd; ln -s -f $MR_REPO .vim_runtime; sh ~/.vim_runtime/install_awesome_vimrc.sh
+post_checkout = cd; ln -s -f $MR_REPO .vim_runtime
 
 [.homesick/repos/incsearch-easymotion.vim]
 order = 70
@@ -93,6 +93,7 @@ post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link dotfiles-ssh
 
 [.homesick/repos/dotfiles-tmux]
 order = 140
+pre_checkout = rm $HOME/.tmux/.tmux.conf $HOME/.config/systemd/user/tmux.service
 checkout = git clone 'git@github.com:julrich/dotfiles-tmux.git' 'dotfiles-tmux'
 post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link dotfiles-tmux
 
