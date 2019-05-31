@@ -68,6 +68,7 @@ $aptget install -y git mr jq
 $chsh --shell /bin/bash `whoami`
 
 ### Install homeshick ###
+rm -rf $HOME/.homesick
 git clone git://github.com/andsens/homeshick.git $HOME/.homesick/repos/homeshick
 source $HOME/.homesick/repos/homeshick/homeshick.sh
 
