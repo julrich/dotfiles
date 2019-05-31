@@ -75,7 +75,4 @@ homeshick link --force
 ### Clone public repos ###
 mr checkout
 
-### Link everything to $HOME ###
-homeshick link --force
-
 echo "Log in again to start your proper shell"
