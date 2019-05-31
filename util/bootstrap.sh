@@ -83,6 +83,6 @@ homeshick --batch clone git@github.com:julrich/dotfiles
 homeshick link --force
 
 ### Clone public repos ###
-mr checkout
+cd && mr checkout
 
 echo "Log in again to start your proper shell"
