@@ -40,7 +40,12 @@ $aptget install -y \
     gnupg-agent \
     software-properties-common
 #### Add Docker’s official GPG key ####
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | $aptkey add -
+OSID = awk -F= '$1=="ID" { print $2 ;}' /etc/os-release
+if [ $OSID = 'debian' ]; then
+	curl -fsSL https://download.docker.com/linux/debian/gpg | $aptkey add -
+elif [ $OSID = 'neon' ]; then
+	curl -fsSL https://download.docker.com/linux/ubuntu/gpg | $aptkey add -
+fi
 #### Verify that you now have the key with the fingerprint ####
 $aptkey fingerprint 0EBFCD88
 
