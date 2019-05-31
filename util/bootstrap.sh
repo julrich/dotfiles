@@ -43,16 +43,23 @@ $aptget install -y \
 OSID = awk -F= '$1=="ID" { print $2 ;}' /etc/os-release
 if [ $OSID = 'debian' ]; then
 	curl -fsSL https://download.docker.com/linux/debian/gpg | $aptkey add -
+    #### Verify that you now have the key with the fingerprint ####
+    $aptkey fingerprint 0EBFCD88
+
+    $addaptrepository \
+       "deb [arch=amd64] https://download.docker.com/linux/debian \
+       $(lsb_release -cs) \
+       stable"
 elif [ $OSID = 'neon' ]; then
 	curl -fsSL https://download.docker.com/linux/ubuntu/gpg | $aptkey add -
-fi
-#### Verify that you now have the key with the fingerprint ####
-$aptkey fingerprint 0EBFCD88
+    #### Verify that you now have the key with the fingerprint ####
+    $aptkey fingerprint 0EBFCD88
 
-$addaptrepository \
-   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-   $(lsb_release -cs) \
-   stable"
+    $addaptrepository \
+       "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+       $(lsb_release -cs) \
+       stable"
+fi
 #### Install Docker CE #####
 $aptget update
 $aptget install -y docker-ce docker-ce-cli containerd.io
