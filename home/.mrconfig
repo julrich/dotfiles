@@ -3,7 +3,7 @@ include = cat ${HOME}/mrconfig
 [.homesick/repos/.tmux]
 order = 3
 pre_checkout = sudo apt install -y tmux
-checkout = git clone 'https://github.com/gpakosz/.tmux' '.tmux'
+checkout = git clone 'https://github.com/julrich/.tmux' '.tmux'
 post_checkout = cd; ln -s -f $MR_REPO .tmux
 
 [.homesick/repos/tpm]
@@ -24,7 +24,7 @@ checkout = git clone 'https://github.com/tmux-plugins/tmux-online-status.git' 't
 
 [.homesick/repos/oh-my-zsh]
 pre_checkout = sudo apt install -y zsh
-order = 5
+order = 6
 checkout = git clone 'https://github.com/robbyrussell/oh-my-zsh' 'oh-my-zsh'
 post_checkout = cd; ln -s -f $MR_REPO .oh-my-zsh
 
@@ -80,11 +80,38 @@ pre_checkout = sudo apt install -y rbenv
 checkout = git clone 'git@github.com:julrich/dotfiles-bash.git' 'dotfiles-bash'
 post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link --force dotfiles-bash
 
+[.homesick/repos/dotfiles-credentials]
+order = 113
+checkout = git clone 'ssh://git@bitbucket.ruhmesmeile.tools:7999/~julrich/dotfiles-credentials.git' 'dotfiles-credentials'
+post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link --force dotfiles-credentials
+
+[.homesick/repos/dotfiles-dnsmasq]
+order = 116
+pre_checkout = sudo apt install -y dnsmasq
+checkout = git clone 'git@github.com:julrich/dotfiles-dnsmasq.git' 'dotfiles-dnsmasq'
+post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link --force dotfiles-dnsmasq
+
 [.homesick/repos/dotfiles-git]
 order = 120
 pre_checkout = sudo apt install -y tig
 checkout = git clone 'git@github.com:julrich/dotfiles-git.git' 'dotfiles-git'
 post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link --force dotfiles-git
+
+[.homesick/repos/dotfiles-node]
+order = 123
+pre_checkout = curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+checkout = git clone 'git@github.com:julrich/dotfiles-node.git' 'dotfiles-node'
+post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link --force dotfiles-node
+
+[.homesick/repos/dotfiles-notes]
+order = 125
+checkout = git clone 'ssh://git@bitbucket.ruhmesmeile.tools:7999/~julrich/dotfiles-notes.git' 'dotfiles-notes'
+post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link --force dotfiles-notes
+
+[.homesick/repos/dotfiles-ruhmesmeile]
+order = 127
+checkout = git clone 'ssh://git@bitbucket.ruhmesmeile.tools:7999/~julrich/dotfiles-ruhmesmeile.git' 'dotfiles-ruhmesmeile'
+post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link --force dotfiles-ruhmesmeile
 
 [.homesick/repos/dotfiles-ssh]
 order = 130
@@ -106,3 +133,4 @@ post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link --force dotfi
 order = 160
 checkout = git clone 'git@github.com:julrich/dotfiles-zsh.git' 'dotfiles-zsh'
 post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link --force dotfiles-zsh
+
