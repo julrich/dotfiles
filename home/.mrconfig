@@ -74,6 +74,10 @@ checkout = git clone 'https://github.com/tpope/vim-repeat.git' 'vim-repeat'
 order = 76
 checkout = git clone 'https://github.com/tpope/vim-surround.git' 'vim-surround'
 
+[.homesick/repos/polybar-themes]
+order = 77
+checkout = git clone 'https://github.com/adi1090x/polybar-themes.git' 'polybar-themes'
+
 [.homesick/repos/dotfiles-bash]
 order = 110
 pre_checkout = sudo apt install -y rbenv
@@ -136,6 +140,7 @@ post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link --force dotfi
 
 [.homesick/repos/dotfiles-i3]
 order = 200
-pre_checkout = sudo apt-get install -y wmctrl feh ninja-build meson
+pre_checkout = sudo apt-get install -y wmctrl feh ninja-build meson mpd sonata xbacklight rofi
 checkout = git clone 'git@github.com:julrich/dotfiles-i3.git' 'dotfiles-i3'
-post_checkout = bash $HOME/.homesick/repos/dotfiles-i3/util/install-i3-gaps.sh && bash $HOME/.homesick/repos/dotfiles-i3/util/install-picom.sh && $HOME/.homesick/repos/homeshick/bin/homeshick link --force dotfiles-i3
+post_checkout = bash $HOME/.homesick/repos/dotfiles-i3/util/install-i3-gaps.sh && bash $HOME/.homesick/repos/dotfiles-i3/util/install-picom.sh && bash $HOME/.homesick/repos/dotfiles-i3/util/install-polybar.sh && $HOME/.homesick/repos/homeshick/bin/homeshick link --force dotfiles-i3 
+
