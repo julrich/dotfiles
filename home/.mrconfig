@@ -140,7 +140,7 @@ post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link --force dotfi
 
 [.homesick/repos/dotfiles-i3]
 order = 200
-pre_checkout = sudo apt-get install -y wmctrl feh ninja-build meson mpd sonata xbacklight rofi
+pre_checkout = sudo apt-get install -y wmctrl feh ninja-build meson mpd sonata rofi dunst
 checkout = git clone 'git@github.com:julrich/dotfiles-i3.git' 'dotfiles-i3'
 post_checkout = bash $HOME/.homesick/repos/dotfiles-i3/util/install-i3-gaps.sh && bash $HOME/.homesick/repos/dotfiles-i3/util/install-picom.sh && bash $HOME/.homesick/repos/dotfiles-i3/util/install-polybar.sh && $HOME/.homesick/repos/homeshick/bin/homeshick link --force dotfiles-i3 
 
