@@ -93,7 +93,7 @@ post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link --force dotfi
 order = 116
 pre_checkout = sudo apt install -y dnsmasq
 checkout = git clone 'git@github.com:julrich/dotfiles-dnsmasq.git' 'dotfiles-dnsmasq'
-post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link --force dotfiles-dnsmasq
+post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link --force dotfiles-dnsmasq && echo "TODO copy /etc files"
 
 [.homesick/repos/dotfiles-git]
 order = 120
@@ -126,7 +126,7 @@ post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link --force dotfi
 order = 140
 pre_checkout = rm -f $HOME/.tmux/.tmux.conf $HOME/.config/systemd/user/tmux.service
 checkout = git clone 'git@github.com:julrich/dotfiles-tmux.git' 'dotfiles-tmux'
-post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link --force dotfiles-tmux
+post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link --force dotfiles-tmux && systemctl --user link $HOME/.homesick/repos/dotfiles-tmux/home/.config/systemd/user/tmux.service && systemctl --user enable tmux.service && systemctl --user start tmux.service
 
 [.homesick/repos/dotfiles-vim]
 order = 150
