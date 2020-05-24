@@ -36,8 +36,12 @@ checkout = git clone 'https://github.com/denysdovhan/spaceship-prompt' 'spaceshi
 order = 51
 checkout = git clone 'https://github.com/zsh-users/zsh-autosuggestions' 'zsh-autosuggestions'
 
-[.homesick/repos/zsh-syntax-highlighting]
+[.homesick/repos/zsh-dircolors-solarized]
 order = 52
+checkout = git clone 'https://github.com/joel-porquet/zsh-dircolors-solarized' 'zsh-dircolors-solarized'
+
+[.homesick/repos/zsh-syntax-highlighting]
+order = 53
 checkout = git clone 'https://github.com/zsh-users/zsh-syntax-highlighting' 'zsh-syntax-highlighting'
 
 [.homesick/repos/vimrc]
