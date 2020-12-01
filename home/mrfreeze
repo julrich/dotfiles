@@ -1,5 +1,5 @@
 .homesick/repos/.tmux 684b00b7a946564723bde9937e4066c7a026230d
-.homesick/repos/oh-my-zsh 7a76afd61e5daab6fb33f955930efa7f4cf16021
+.homesick/repos/oh-my-zsh 021f0251e072b0cd2c2f1bfb5b0d2f57fbdfdc50
 .homesick/repos/vimrc 92dab794c6f7b28ead528ec01cfe57cc35ed5a79
 .homesick/repos/tpm 60a36d6f7adddfb68d68349dce3081e7d5c4d4ab
 .homesick/repos/tmux-resurrect e4825055c92e54b0c6ec572afc9b6c4723aba6c8
@@ -27,5 +27,5 @@
 .homesick/repos/dotfiles-ssh 0bf4e642763e912c96a768a568bbb1411fb6cb31
 .homesick/repos/dotfiles-tmux 7672df1c9223ec30980fd0c47c82f00d993dd5dc
 .homesick/repos/dotfiles-vim ad5d826bc079404c6a843c3f0fcc35d01ca5c9c1
-.homesick/repos/dotfiles-zsh c5424e15e9ce39bc5a59e706e14a244381e7c585
+.homesick/repos/dotfiles-zsh 51512a5805896b101c2008b97d58f656ea823850
 .homesick/repos/dotfiles-i3 769e1a7a1d780a7db906a49b9ae97451c0971acf
