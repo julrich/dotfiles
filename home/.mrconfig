@@ -105,6 +105,11 @@ pre_checkout = sudo apt install -y tig
 checkout = git clone 'git@github.com:julrich/dotfiles-git.git' 'dotfiles-git'
 post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link --force dotfiles-git
 
+[.homesick/repos/dotfiles-history]
+order = 122
+checkout = git clone 'git@github.com:julrich/dotfiles-history.git' 'dotfiles-history'
+post_checkout = $HOME/.homesick/repos/homeshick/bin/homeshick link --force dotfiles-history
+
 [.homesick/repos/dotfiles-node]
 order = 123
 pre_checkout = curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
